@@ -1,0 +1,37 @@
+<div class="container aling-items-center ">
+  <h1 class="pt-5">OPERACIONES</h1>
+  <!-- Creacion de la grilla -->
+  <div class="row text-center">
+    <div class="col-12 col-md-12 col-lg-6">
+      <form class="bg-light shadow my-3" [formGroup]="myform">  <!-- el formulario se llama myform-->
+        <div class="row px-4 py-3">
+          <div class="row">
+            <div class="col-12 pt-3">
+              <label>NUMERO 1:</label><input type="number" class="form-control" formControlName="numero1" />
+            </div>
+            <div class="col-12 pt-3">
+              <label>NUMERO 2:</label><input type="number" class="form-control" formControlName="numero2" />
+            </div>
+          </div>
+            
+          <div class="row pt-3">
+            <div class="col-12 col-md-3"><button (click)="sum(myform.value)" class="btn btn-primary shadow">suma</button>
+            </div>
+            <div class="col-12 col-md-3"><button (click)="res(myform.value)" class="btn btn-danger shadow">Resta</button>
+            </div>
+            <div class="col-12 col-md-3"><button (click)="mul(myform.value)" class="btn btn-info shadow">Multiplicación</button>
+            </div>
+            <div class="col-12 col-md-3"><button (click)="div(myform.value)" class="btn btn-dark shadow">División</button>
+            </div>
+          </div>
+
+          <p class="bg-dark text-light mt-4 my-2">RESPUESTA: {{ respuesta }}</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-lg-6">
+       <!-- puede colocar una imagen -->
+    </div>
+  </div>
+ </div>
